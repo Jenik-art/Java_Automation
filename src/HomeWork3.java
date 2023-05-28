@@ -48,4 +48,42 @@ public class HomeWork3 {
             }
         } while (score < 0 || score > 100);
     }
+
+    public static void homeWork3_4() {
+        String[] channels = {"ABC", "BBC", "CNN", "MTV"};
+        for ( int i=0; i<=channels.length -1; i++) {
+            i+=0;
+            String menu = String.format("%d. %s", i+1, channels[i] );
+                System.out.println(menu);
+        }
+        System.out.println("0. Exit");
+        System.out.println("Make your chose");
+        Scanner scanner4 = new Scanner(System.in);
+        int chose;
+        do {
+            chose = scanner4.nextInt();
+            switch (chose) {
+                case 1:
+                    System.out.println(channels[chose-1]);
+                    break;
+                case 2:
+                    System.out.println(channels[chose-1]);
+                    break;
+                case 3:
+                    System.out.println(channels[chose-1]);
+                    break;
+                case 4:
+                    System.out.println(channels[chose-1]);
+                    break;
+                case 0:
+                    break;
+
+                default:
+                    System.out.println("Unknown channel");
+            }
+        } while (chose != 0);
+    }
+    public static void homeWork3_5(){
+
+    }
 }
