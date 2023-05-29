@@ -57,23 +57,23 @@ public class HomeWork3 {
                 System.out.println(menu);
         }
         System.out.println("0. Exit");
-        System.out.println("Make your chose");
+        System.out.println("Make your choise");
         Scanner scanner4 = new Scanner(System.in);
-        int chose;
+        int choise;
         do {
-            chose = scanner4.nextInt();
-            switch (chose) {
+            choise = scanner4.nextInt();
+            switch (choise) {
                 case 1:
-                    System.out.println(channels[chose-1]);
+                    System.out.println(channels[choise-1]);
                     break;
                 case 2:
-                    System.out.println(channels[chose-1]);
+                    System.out.println(channels[choise-1]);
                     break;
                 case 3:
-                    System.out.println(channels[chose-1]);
+                    System.out.println(channels[choise-1]);
                     break;
                 case 4:
-                    System.out.println(channels[chose-1]);
+                    System.out.println(channels[choise-1]);
                     break;
                 case 0:
                     break;
@@ -81,9 +81,54 @@ public class HomeWork3 {
                 default:
                     System.out.println("Unknown channel");
             }
-        } while (chose != 0);
+        } while (choise != 0);
     }
     public static void homeWork3_5(){
+        int choise;
+
+        do {
+            String[] commands = {"Enter Name", "Enter Surname", "Enter Birthday", "Show data"};
+            for ( int i=0; i<=commands.length -1; i++) {
+                i+=0;
+                String menu = String.format("%d. %s", i+1, commands[i] );
+                System.out.println(menu);
+            }
+            System.out.println("0. Exit");
+            System.out.println("Please, choose any options");
+
+            Scanner scanner5 = new Scanner(System.in);
+            choise = scanner5.nextInt();
+
+            String name;
+            String surname = "";
+            int dateOfBirth = 0;
+
+            switch (choise) {
+                case 1:
+                    Scanner scanner6 = new Scanner(System.in);
+                    name = scanner6.nextLine();
+                    System.out.println("Name is: " + name);
+                    break;
+                case 2:
+                    Scanner scanner7 = new Scanner(System.in);
+                    surname = scanner7.nextLine();
+                    System.out.println("Surname is: " + surname);
+                    break;
+                case 3:
+                    Scanner scanner8 = new Scanner(System.in);
+                    dateOfBirth = scanner8.nextInt();
+                    System.out.println("Date of Birth is: " + dateOfBirth);
+                    break;
+                case 4:
+                    System.out.println("Data");
+                    break;
+                case 0:
+                    break;
+
+                default:
+                    System.out.println("Unknown command");
+            }
+        } while (choise != 0);
 
     }
 }
