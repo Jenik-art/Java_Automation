@@ -52,34 +52,20 @@ public class HomeWork3 {
     public static void homeWork3_4() {
         String[] channels = {"ABC", "BBC", "CNN", "MTV"};
         for ( int i=0; i<=channels.length -1; i++) {
-            i+=0;
             String menu = String.format("%d. %s", i+1, channels[i] );
                 System.out.println(menu);
         }
         System.out.println("0. Exit");
         System.out.println("Make your choise");
-        Scanner scanner4 = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int choise;
         do {
-            choise = scanner4.nextInt();
-            switch (choise) {
-                case 1:
-                    System.out.println(channels[choise-1]);
-                    break;
-                case 2:
-                    System.out.println(channels[choise-1]);
-                    break;
-                case 3:
-                    System.out.println(channels[choise-1]);
-                    break;
-                case 4:
-                    System.out.println(channels[choise-1]);
-                    break;
-                case 0:
-                    break;
-
-                default:
-                    System.out.println("Unknown channel");
+            choise = scanner.nextInt();
+            scanner.nextLine();
+            if (choise > 0 && choise <=4){
+                System.out.println(channels[choise-1]);
+            } else if (choise != 0 && choise > 4) {
+                System.out.println("Unknown channel");
             }
         } while (choise != 0);
     }
@@ -96,8 +82,8 @@ public class HomeWork3 {
             System.out.println("0. Exit");
             System.out.println("Please, choose any options");
 
-            Scanner scanner5 = new Scanner(System.in);
-            choise = scanner5.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            choise = scanner.nextInt();
 
             String name;
             String surname = "";
@@ -105,18 +91,15 @@ public class HomeWork3 {
 
             switch (choise) {
                 case 1:
-                    Scanner scanner6 = new Scanner(System.in);
-                    name = scanner6.nextLine();
+                    name = scanner.nextLine();
                     System.out.println("Name is: " + name);
                     break;
                 case 2:
-                    Scanner scanner7 = new Scanner(System.in);
-                    surname = scanner7.nextLine();
+                    surname = scanner.nextLine();
                     System.out.println("Surname is: " + surname);
                     break;
                 case 3:
-                    Scanner scanner8 = new Scanner(System.in);
-                    dateOfBirth = scanner8.nextInt();
+                    dateOfBirth = scanner.nextInt();
                     System.out.println("Date of Birth is: " + dateOfBirth);
                     break;
                 case 4:
