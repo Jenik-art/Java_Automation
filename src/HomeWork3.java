@@ -71,11 +71,12 @@ public class HomeWork3 {
     }
     public static void homeWork3_5(){
         int choise;
-
+        String name = "";
+        String surname = "";
+        int dateOfBirth = 0;
         do {
             String[] commands = {"Enter Name", "Enter Surname", "Enter Birthday", "Show data"};
-            for ( int i=0; i<=commands.length -1; i++) {
-                i+=0;
+            for ( int i=0; i<= commands.length -1; i++) {
                 String menu = String.format("%d. %s", i+1, commands[i] );
                 System.out.println(menu);
             }
@@ -84,10 +85,6 @@ public class HomeWork3 {
 
             Scanner scanner = new Scanner(System.in);
             choise = scanner.nextInt();
-
-            String name;
-            String surname = "";
-            int dateOfBirth = 0;
 
             switch (choise) {
                 case 1:
@@ -100,14 +97,15 @@ public class HomeWork3 {
                     break;
                 case 3:
                     dateOfBirth = scanner.nextInt();
+                    scanner.nextLine();
                     System.out.println("Date of Birth is: " + dateOfBirth);
                     break;
                 case 4:
-                    System.out.println("Data");
+                    String case4 = String.format("Name: %s, Surname: %s, Date of Birth: %d", name, surname, dateOfBirth);
+                    System.out.println(case4);
                     break;
                 case 0:
                     break;
-
                 default:
                     System.out.println("Unknown command");
             }
