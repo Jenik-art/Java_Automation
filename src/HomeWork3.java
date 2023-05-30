@@ -85,6 +85,7 @@ public class HomeWork3 {
 
             Scanner scanner = new Scanner(System.in);
             choise = scanner.nextInt();
+            scanner.nextLine();
 
             switch (choise) {
                 case 1:
