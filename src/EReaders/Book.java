@@ -1,19 +1,24 @@
-public class Book {
+package EReaders;
+
+public class Book extends Literature{
     private String author;
     private String name;
     private String cover;
     private String content;
-    public Book(String author, String name, String cover, String content){
+    public Book(String author, String name, String cover, String content) {
         this.author = author;
         this.name = name;
         this.cover = cover;
         this.content = content;
+        printItemWasAdded(name);
     }
 
-    public String getAuthor(){
+    @Override
+    public String getAuthor() {
         return author;
     }
-    public String getName(){
+    @Override
+    public String getName() {
         return name;
     }
 
